@@ -1,0 +1,79 @@
+
+// Program Name: Stop Grabber Scanner MT4
+// Developer: Forex Robot Easy Team
+// Developer's Site: forexroboteasy.com
+
+// Customizable Parameters
+input bool UseMarketWatch = true; // Enable scanning using Market Watch
+
+// Function to scan for the stop grabber pattern
+void ScanStopGrabberPattern()
+{
+    // Implement code to scan for the stop grabber pattern
+    // ...
+    // Code logic to identify the pattern accurately and efficiently
+    // ...
+}
+
+// Function to generate buy/sell signals based on the identified stop grabber pattern
+void GenerateSignals()
+{
+    // Implement code to generate buy/sell signals based on the identified pattern
+    // ...
+    // Code logic to generate high probability signals reliably and consistently
+    // ...
+}
+
+// Function to check if signals repaint
+bool CheckRepainting()
+{
+    // Implement code to check if signals repaint
+    // ...
+    // Code logic to ensure generated signals remain consistent and do not repaint
+    // ...
+    return false; // Return false if signals do not repaint
+}
+
+// Function to scan for the stop grabber pattern across all markets
+void ScanAllMarkets()
+{
+    // Implement code to scan for the stop grabber pattern across all markets
+    // ...
+    // Code logic to optimize scanning for various markets
+    // ...
+}
+
+// Function to enable the tool to work with multiple timeframes
+void ScanMultipleTimeframes()
+{
+    // Implement code to scan for the pattern and generate signals on different timeframes
+    // ...
+    // Code logic to scan for the pattern and generate signals on MN1, W1, D1, H4, H1, M30, M15, M5, and M1 timeframes
+    // ...
+}
+
+// Main function
+int start()
+{
+    // Check if Market Watch scanning is enabled
+    if (UseMarketWatch)
+    {
+        ScanStopGrabberPattern();
+        GenerateSignals();
+        if (!CheckRepainting())
+        {
+            ScanAllMarkets();
+            ScanMultipleTimeframes();
+        }
+        else
+        {
+            Print('Signals repaint. Please adjust parameters.');
+        }
+    }
+    else
+    {
+        Print('Market Watch scanning is disabled. Please enable it in the parameters.');
+    }
+
+    return 0;
+}
